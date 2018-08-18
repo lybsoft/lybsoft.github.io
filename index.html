@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)https://getbootstrap.com/docs/4.0/examples/sticky-footer/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="lybxlpsv">
+
+    <title>lybBass FX</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.8.6/showdown.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script>
+var data0;
+var data1;
+var data2;
+
+var tohtml = "";
+
+$.get("page.txt", function(data, status) {
+ data0 = data;
+ data1 = data.split("|||");
+ data1.forEach(function(element)
+{
+var le_data = element.split(";;;");
+ tohtml = tohtml + "<div class=\"jumbotron\">\r\n  <h1 class=\"display-4\">" + le_data[0] +"</h1>\r\n  <p class=\"lead\">" + le_data[1] +"</p>\r\n  <hr class=\"my-4\">\r\n \r\n  <p class=\"lead\">\r\n    <a class=\"btn btn-primary btn-lg\" href=\"" + le_data[2] + "\" role=\"button\">Learn more</a>\r\n  </p>\r\n</div>";
+});
+
+ document.getElementById('page_content').innerHTML = tohtml;
+  });
+
+</script>
+
+<style>
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  margin-bottom: 60px; /* Margin bottom by footer height */
+}
+
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+.container {
+  width: auto;
+  padding: 0 15px;
+}
+
+</style>
+
+  </head>
+
+  <body>
+
+    <!-- Begin page content -->
+    <main role="main" class="container">
+
+  <h1 class="display-4" style="margin-bottom: 25px;">lybxlpsv's stuff</h1>
+  
+    <div id="page_content">
+
+    </div>
+
+    </main>
+
+</body></html>
