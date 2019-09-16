@@ -1,0 +1,6 @@
+#date 16 sept 2019
+GM|GV|TU|!|TEX tex_col, a_tex_color0, texture[0], 2D;|!|TEX tex_col, a_tex_color0, texture[0], 2D; MUL tex_col, 1, tex_col;|!|*.
+TU|!|RCP sum.y, sum.y;\r\n|!|RCP sum.y, sum.y;\r\nADD sum.x, sum.x, 0.000300;\r\n|!|*.
+TU|!|MUL _tmp0.xz, ybr, 2.0; POW _tmp0.x, |_tmp0.x|, 0.85; SSG _tmp0.yw, ybr.xxzz; POW _tmp0.z, |_tmp0.z|, 0.85; MUL _tmp0.yw, _tmp0, 0.5; MUL tmp.xz, _tmp0.xxzz, _tmp0.yyww;|!|MUL _tmp0.xz, ybr, 2.0; POW _tmp0.x, |_tmp0.x|, 0.85; TEMP _tmpForSSG; SGE _tmpForSSG.xz, ybr.xxzz, 0; SUB _tmpForSSG.xz, _tmpForSSG.xxzz, 1; SGT _tmpForSSG.yw, ybr.xxzz, 0; ADD _tmp0.yw, _tmpForSSG.xxzz, _tmpForSSG.yyww; POW _tmp0.z, |_tmp0.z|, 0.85; MUL _tmp0.yw, _tmp0, 0.5; MUL tmp.xz, _tmp0.xxzz, _tmp0.yyww;|!|*.npr*.
+TOON|!|MAD tmp.y, lc.z, 1.2, -0.5;|!|MAD tmp.y, lc.z,<line>;|!|.*cloth_npr.*
+TOON|!|MAD diff.xyz, spec, spec_ratio, diff;|!|#|!|.*skin_default.*
